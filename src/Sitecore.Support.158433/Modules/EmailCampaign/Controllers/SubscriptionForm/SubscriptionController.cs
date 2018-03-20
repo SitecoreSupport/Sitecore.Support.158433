@@ -114,6 +114,7 @@
 
                 if (string.IsNullOrEmpty(currentContactsEmailAddress))
                 {
+                    Sitecore.Analytics.Tracker.Current.Session.Identify(submissionValuesModel.EmailAddress);
                     UpdateEmailInXdb(submissionValuesModel.EmailAddress);
                 }
 
